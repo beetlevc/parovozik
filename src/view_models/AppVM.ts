@@ -31,7 +31,7 @@ function settings_parseStringArray(value: any, defaultValue: string[]): string[]
 function stringColumnFilter(data?: string, filterString?: string): boolean {
     // console.log(data, filterString);
     if (filterString)
-        return data !== undefined && data.toLowerCase().includes(filterString.toLowerCase());
+        return data !== undefined && data.toLowerCase().includes(filterString.trim().toLowerCase());
     else
         return true;
 }
